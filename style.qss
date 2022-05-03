@@ -338,9 +338,14 @@ WLabel {
 }
 
 #WaveformInfo_Title,
-#WaveformInfo_Key,
 #WaveformInfo_Bars {
   font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#WaveformInfo_Key {
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
