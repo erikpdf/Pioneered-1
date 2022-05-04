@@ -170,7 +170,7 @@ WPushButton[value="1"]:hover {
 /*     Effects                                                          */
 /************************************************************************/
 
-WEffectChainPresetSelector {
+WEffectSelector {
   background-color: transparent;
   color: #2d85cd;
   font-size: 14px;
