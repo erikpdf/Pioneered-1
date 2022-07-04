@@ -256,7 +256,7 @@ WEffectSelector {
 #LibraryWrapper WLibrarySidebar {
   background-color: #32323c;
   selection-background-color: #e5e6ea;
-  border-left: 4px solid gray;
+  border-left: 0px solid gray;
   color: #e5e6ea;
   font-weight: bold;
   selection-color: black;
