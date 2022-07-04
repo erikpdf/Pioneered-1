@@ -222,7 +222,7 @@ WEffectSelector {
 
 #LibraryWrapper QScrollBar:vertical {
   border: 0;
-  width: 4px;
+  width: 8px;
 }
 
 #LibraryWrapper QScrollBar::add-page,
