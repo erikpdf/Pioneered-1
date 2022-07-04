@@ -263,6 +263,18 @@ WEffectSelector {
   text-transform: uppercase;
 }
 
+/* triangle for closed/opened branches in treeview */
+WLibrarySidebar::branch:has-children:!has-siblings:closed,
+WLibrarySidebar::branch:closed:has-children:has-siblings {
+  border-image: none; image: url(skin:/icons/style_branch_closed.svg);
+}
+
+WLibrarySidebar::branch:open:has-children:!has-siblings,
+WLibrarySidebar::branch:open:has-children:has-siblings {
+  border-image: none; image: url(skin:/icons/style_branch_open.svg);
+}
+
+
 #LibraryWrapper QPushButton,
 #LibraryWrapper QSpinBox,
 #LibraryWrapper QComboBox,
