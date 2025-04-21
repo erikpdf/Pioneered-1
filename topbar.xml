@@ -10,8 +10,16 @@
         <SizePolicy>me,me</SizePolicy>
         <Children>
           <Template src="skin:tab.xml">
-            <SetVariable name="tab_name">Overview</SetVariable>
-            <SetVariable name="config_key">overview</SetVariable>
+            <SetVariable name="tab_name">Channel 1&amp;2 </SetVariable>
+            <SetVariable name="config_key">overview12</SetVariable>
+          </Template>
+          <Template src="skin:tab.xml">
+            <SetVariable name="tab_name">Channel 3&amp;4</SetVariable>
+            <SetVariable name="config_key">overview34</SetVariable>
+          </Template>
+          <Template src="skin:tab.xml">
+            <SetVariable name="tab_name">4 Channels</SetVariable>
+            <SetVariable name="config_key">overview4</SetVariable>
           </Template>
           <Template src="skin:tab.xml">
             <SetVariable name="tab_name">Browse</SetVariable>

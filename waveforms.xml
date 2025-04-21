@@ -5,10 +5,10 @@
     <Size>0me,0me</Size>
     <Children>
       <Template src="skin:waveform.xml">
-        <SetVariable name="channel">1</SetVariable>
+        <SetVariable name="channel"><Variable name="channel1"/></SetVariable>
       </Template>
       <Template src="skin:waveform.xml">
-        <SetVariable name="channel">2</SetVariable>
+        <SetVariable name="channel"><Variable name="channel2"/></SetVariable>
       </Template>
     </Children>
   </WidgetGroup>

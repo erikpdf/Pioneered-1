@@ -1,26 +1,32 @@
 <Template>
-  <WidgetGroup>
-    <ObjectName>Deck</ObjectName>
-    <Layout>vertical</Layout>
-    <Children>
-      <WidgetGroup>
-        <ObjectName>DeckHeader</ObjectName>
-        <Layout>horizontal</Layout>
+    <WidgetGroup>
+        <ObjectName>Deck</ObjectName>
+        <Layout>vertical</Layout>
         <Children>
-          <Label>
+            <WidgetGroup>
+    <ObjectName>DeckHeader</ObjectName>
+    <Align>left</Align>
+    <Layout>horizontal</Layout>
+    <SizePolicy>me,me</SizePolicy>
+    <Size>0me,25f</Size>
+    <Children>
+        <Label>
             <ObjectName>DeckTitleNote</ObjectName>
             <Text>&#9834;</Text>
-          </Label>
-          <TrackProperty>
-            <ObjectName>DeckTitle</ObjectName>
-            <TooltipId>track_title</TooltipId>
-            <SizePolicy>me,25f</SizePolicy>
-            <Property>title</Property>
-            <Channel><Variable name="channel"/></Channel>
-            <Elide>right</Elide>
-          </TrackProperty>
-        </Children>
-      </WidgetGroup>
+        </Label>
+       <TrackProperty>
+        <ObjectName>DeckTitle</ObjectName>
+        <TooltipId>track_title</TooltipId>
+        <SizePolicy>me,25f</SizePolicy>
+        <MaximumSize>350,25</MaximumSize>
+        <Property>title</Property>
+        <Channel><Variable name="channel"/></Channel>
+        <Elide>right</Elide>
+        <Align>left</Align>
+</TrackProperty>
+
+    </Children>
+</WidgetGroup>
       <WidgetGroup>
         <ObjectName>DeckInfo</ObjectName>
         <Layout>horizontal</Layout>

@@ -4,24 +4,20 @@
     <Layout>vertical</Layout>
     <Size>0me,0me</Size>
     <Children>
-      <WidgetGroup>
-        <ObjectName>Waveforms_Container</ObjectName>
-        <Layout>horizontal</Layout>
-        <Children>
-          <Template src="skin:waveforms.xml"></Template>
-          <Template src="skin:effects.xml"></Template>
-        </Children>
-      </WidgetGroup>
+      <Template src="skin:waveforms.xml">
+            <SetVariable name="channel1"><Variable name="channel1"/></SetVariable>
+            <SetVariable name="channel2"><Variable name="channel2"/></SetVariable>
+      </Template>
       <WidgetGroup>
         <ObjectName>Decks</ObjectName>
         <Layout>horizontal</Layout>
         <Size>0me,150max</Size>
         <Children>
           <Template src="skin:deck.xml">
-            <SetVariable name="channel">1</SetVariable>
+            <SetVariable name="channel"><Variable name="channel1"/></SetVariable>
           </Template>
           <Template src="skin:deck.xml">
-            <SetVariable name="channel">2</SetVariable>
+            <SetVariable name="channel"><Variable name="channel2"/></SetVariable>
           </Template>
         </Children>
       </WidgetGroup>

@@ -7,13 +7,14 @@
 		<language>*</language>
 		<license>GPL</license>
 		<attributes>
-			<attribute config_key="[Master],num_decks">2</attribute>
-			<attribute persist="true" config_key="[Master],maximize_library">0</attribute>
-			<attribute persist="true" config_key="[Master],skin_settings">0</attribute>
-			<attribute persist="true" config_key="[Microphone],show_microphone">0</attribute>
-			<attribute persist="true" config_key="[VinylControl],show_vinylcontrol">0</attribute>
-			<attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
-			<attribute persist="true" config_key="[Library],show_coverart">0</attribute>
+			<attribute config_key="[App],num_decks">4</attribute>
+			<attribute config_key="[App],num_samplers">16</attribute>
+			<attribute persist="true" config_key="[App],maximize_library">0</attribute>
+			<attribute persist="true" config_key="[App],skin_settings">0</attribute>
+			<attribute persist="true" config_key="[Skin],show_microphone">0</attribute>
+			<attribute persist="true" config_key="[Skin],show_vinylcontrol">0</attribute>
+			<attribute persist="true" config_key="[Skin],show_previewdeck">0</attribute>
+			<attribute persist="true" config_key="[Skin],show_coverart">0</attribute>
 		</attributes>
 	</manifest>
 
@@ -47,9 +48,27 @@
 			</Children>
 		</SingletonDefinition>
 		<SingletonDefinition>
-			<ObjectName>Overview_Singleton</ObjectName>
+			<ObjectName>Overview12_Singleton</ObjectName>
 			<Children>
-				<Template src="skin:overview.xml"/>
+				<Template src="skin:overview.xml">
+					<SetVariable name="channel1">1</SetVariable>
+					<SetVariable name="channel2">2</SetVariable>
+				</Template>
+			</Children>
+		</SingletonDefinition>
+		<SingletonDefinition>
+			<ObjectName>Overview34_Singleton</ObjectName>
+			<Children>
+				<Template src="skin:overview.xml">
+					<SetVariable name="channel1">3</SetVariable>
+					<SetVariable name="channel2">4</SetVariable>
+				</Template>
+			</Children>
+		</SingletonDefinition>
+		<SingletonDefinition>
+			<ObjectName>Overview4_Singleton</ObjectName>
+			<Children>
+				<Template src="skin:overview4.xml"/>
 			</Children>
 		</SingletonDefinition>
 		<SingletonDefinition>
@@ -58,7 +77,6 @@
 				<Template src="skin:library.xml"/>
 			</Children>
 		</SingletonDefinition>
-
 		<WidgetGroup>
 			<ObjectName>SkinContainer</ObjectName>
 			<Layout>vertical</Layout>
@@ -73,8 +91,14 @@
 						</SingletonContainer>
 						<WidgetStack currentpage="[Tab],current">
 							<Children>
-								<SingletonContainer trigger="[Tab],overview">
-									<ObjectName>Overview_Singleton</ObjectName>
+								<SingletonContainer trigger="[Tab],overview12">
+									<ObjectName>Overview12_Singleton</ObjectName>
+								</SingletonContainer>
+								<SingletonContainer trigger="[Tab],overview34">
+									<ObjectName>Overview34_Singleton</ObjectName>
+								</SingletonContainer>
+								<SingletonContainer trigger="[Tab],overview4">
+									<ObjectName>Overview4_Singleton</ObjectName>
 								</SingletonContainer>
 								<SingletonContainer trigger="[Tab],library" on_hide_select="0">
 									<ObjectName>Library_Singleton</ObjectName>
